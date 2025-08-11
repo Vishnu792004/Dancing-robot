@@ -1,0 +1,211 @@
+ body{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    background-color: lightblue;
+}
+.robo-wrapper {
+  animation: walkForward 4s infinite linear;
+  display: inline-block;
+  position: relative;
+}
+@keyframes walkForward {
+  0%   { transform: translateX(-50px) translateY(0); }
+  25%  { transform: translateX(200px) translateY(-5px); }
+  50%  { transform: translateX(400px) translateY(0); }
+  75%  { transform: translateX(200px) translateY(-5px); }
+  100% { transform: translateX(-50px) translateY(0); }
+}
+#face {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(235, 179, 37);
+  border-radius: 40%;
+  box-shadow: 15px 0px 30px darkred;
+  background-color: rgb(255, 248, 248);
+  animation:
+    example 2s infinite,
+    faceRotate 2s infinite ease-in-out; /* added rotation */
+  transform-origin: center center;
+}
+
+@keyframes faceRotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+#eyes{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 60px;
+}
+#eye1{
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    margin-top: 40px;
+    border-radius: 50%;
+    animation-name: eyes1;
+  animation-duration: 2s;
+  animation-iteration-count: 20;
+}
+#eye2{
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    margin-top: 40px;
+    border-radius: 50%;
+    animation-name: eyes2;
+  animation-duration: 2s;
+  animation-iteration-count: 20;
+}
+#iris1{
+    background-color:white;
+    height: 15px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+#iris2{
+    background-color: white;
+    height: 15px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+#mounth{
+    background-color:black;
+    height: 25px;
+    width: 65px;
+    border-radius:0% 0% 50% 50%;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+#tongue{
+    background-color: red;
+    height: 60px;
+    width: 45px;
+    border-radius:0% 0% 50% 50%;
+    margin-top: 30px;
+    margin-left: 10px;
+  animation-name: tt;
+    animation-duration: 1s;
+    animation-iteration-count: 1000;
+    animation-delay: 2s;
+}
+@keyframes tt{
+    from{height:5px}
+    to{height:40px}
+}
+@keyframes example {
+    0% {background-color: rgb(245, 236, 236);}
+    10%{background-color: yellow;}
+    20%{background-color: rgb(0, 255, 255);}
+    30%{background-color: rgb(0, 255, 42);}
+  }
+  @keyframes eyes1 {
+    0% {background-color: rgb(12, 0, 0);}
+    10%{background-color: rgb(236, 236, 229);}
+    20%{background-color: rgb(255, 251, 0);}
+    30%{background-color: rgb(255, 0, 255);}
+  }
+  @keyframes eyes2 {
+    0% {background-color: rgb(12, 0, 0);}
+    10%{background-color: rgb(236, 236, 229);}
+    20%{background-color: rgb(255, 251, 0);}
+    30%{background-color: rgb(255, 0, 255);}
+  }
+  #body {
+    background-color: rgb(253, 251, 251);
+    height: 300px;
+    width: 200px;
+    border-radius: 35%;
+    margin-left: 10px;
+    margin-top: 85px;
+    animation:
+      body 1s infinite alternate,
+      bodyRotate 1s infinite alternate ease-in-out;
+    transform-origin: center center;
+  }
+  
+  @keyframes body {
+    0% { background-color: rgb(245, 236, 236); }
+    10% { background-color: yellow; }
+    20% { background-color: rgb(0, 255, 255); }
+    30% { background-color: rgb(0, 255, 42); }
+  }
+  
+  @keyframes bodyRotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+  }
+  #legs{
+    display: flex;
+}
+#leg1{
+  background-color:rgb(7, 2, 2);
+  height: 200px;
+  width: 20px;
+  border-radius: 30%;
+  margin-left: 58px;
+  margin-bottom: 100px;
+}
+#leg2{
+  background-color:rgb(7, 0, 0);
+  height: 200px;
+  width: 20px;
+  border-radius: 30%;
+  margin-left: 58px;
+  margin-bottom: 100px;
+}
+#leg1, #leg2 {
+  animation: wave1 0.5s infinite alternate;
+  transform-origin: top center;
+}
+@keyframes wave1 {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
+#hands{
+display: flex;
+        justify-content: space-around;
+        margin-top: 60px;
+}
+#hand1{
+  background-color:rgb(7, 2, 2);
+  height: 200px;
+  width: 20px;
+  margin-left: -50px;
+  margin-top: 60px;
+  border-radius: 30%;}
+  #hand2{
+    background-color:rgb(7, 2, 2);
+    height: 200px;
+    width: 20px;
+    margin-left: 220px;
+    margin-top: -180px;
+    border-radius: 30%;}
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(30deg); }
+      100% { transform: rotate(0deg); }
+    }
+    #hand1, #hand2 {
+      animation: wave 0.5s infinite alternate;
+      transform-origin: top center;
+      animation-delay: 0s;
+      animation-delay: 0.5s;
+    }
+    h1{
+      margin-top:-100px;
+      margin-right: -190px;
+      justify-content: left;
+    }
+    
+
